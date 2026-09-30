@@ -30,9 +30,9 @@ const (
 )
 
 func main() {
-	// delete old images if exists or exit from loop
-	for i := 1; ; i++ {
-		err := os.Remove(strconv.Itoa(i) + ".png")
+	// delete old png images if exists or exit from loop
+	for {
+		err := os.Remove("*.png")
 		if err != nil {
 			break
 		}
